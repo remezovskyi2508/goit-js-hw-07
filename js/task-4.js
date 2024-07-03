@@ -28,7 +28,9 @@ form.addEventListener("submit", event => {
 
 });
 
-//Питання чи треба було прописувати стилі в нашому ДЗ?
+/*Питання, чи треба було прописувати стилі в нашому ДЗ? 
+Якщо так тоді мені треба буде міняти HTML код щоб в lable 
+не було вкладено input.*/
 
 
 form.style.display = "block";
@@ -51,7 +53,7 @@ btnStyle.style.fontSize = "16px";
 btnStyle.style.cursor = "pointer";
 btnStyle.style.fontWeight = "500";
 btnStyle.style.lineHeight = "24px";
-btnStyle.style.letter = "4%";
+btnStyle.style.letterSpacing = "4%";
 btnStyle.style.backgroundColor = "#4E75FF";
 btnStyle.style.color = "white";
 btnStyle.style.padding = "8px 16px";
