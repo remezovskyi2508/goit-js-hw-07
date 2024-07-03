@@ -1,4 +1,5 @@
 const gallery = document.querySelector(".gallery");
+const body = document.querySelector("body");
 
 
 const images = [
@@ -32,6 +33,12 @@ const images = [
 images.forEach((item) => { // Перебираємо item в масиві images
   gallery.insertAdjacentHTML(
     "beforeend", // вкладаємо в середеину ul
-    `<li><img src="${item.url}" alt="${item.alt}"></li>`
+    `<li><img src="${item.url}" alt="${item.alt}" style="width: 360px; height: 300px;"></li>`
   );
 });
+
+gallery.style.flexWrap = "wrap";
+gallery.style.display = "flex";
+gallery.style.listStyleType = "none";
+gallery.style.gap = "24px";
+
