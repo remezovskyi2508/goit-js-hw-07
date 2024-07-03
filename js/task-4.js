@@ -4,34 +4,32 @@ const btn = document.querySelector(".button[type='submit']");
 
 const btnStyle = document.querySelector("button");
 
-form.addEventListener("submit", event => {
-    event.preventDefault();
-    
-    const emailValue = form.elements.email.value;
-    const passwordValue = form.elements.password.value;
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
 
-    if (emailValue === "" || passwordValue === "") {
-        alert("All form fields must be filled in");
-        return;
-    }
+  const emailValue = form.elements.email.value;
+  const passwordValue = form.elements.password.value;
 
-    const formData = {
-        email: emailValue,
-        password: passwordValue
-    };
+  if (emailValue === "" || passwordValue === "") {
+    alert("All form fields must be filled in");
+    return;
+  }
 
-     // Log object to console
-    console.log(formData);
-    
-    // Reset form
-    form.reset();
+  const formData = {
+    email: emailValue,
+    password: passwordValue,
+  };
 
+  // Log object to console
+  console.log(formData);
+
+  // Reset form
+  form.reset();
 });
 
 /*Питання, чи треба було прописувати стилі в нашому ДЗ? 
 Якщо так тоді мені треба буде міняти HTML код щоб в lable 
 не було вкладено input.*/
-
 
 form.style.display = "block";
 form.style.margin = "0 auto";
@@ -59,4 +57,3 @@ btnStyle.style.color = "white";
 btnStyle.style.padding = "8px 16px";
 btnStyle.style.borderRadius = "8px";
 btnStyle.style.fontWeight = "500";
-

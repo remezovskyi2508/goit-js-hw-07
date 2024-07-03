@@ -16,15 +16,13 @@ changeButton.addEventListener("click", () => {
   textColor.textContent = rgbColor;
 });
 
-
-
 widget.style.textAlign = "center";
 widget.style.fontFamily = "Montserrat";
 widget.style.fontWeight = "400";
 changeButton.style.fontWeight = "500";
 changeButton.style.border = "none";
 widget.style.fontSize = "16px";
-widget.style.lineHeight = "24px"; 
+widget.style.lineHeight = "24px";
 widget.style.letter = "4%";
 changeButton.style.backgroundColor = "#4E75FF";
 changeButton.style.color = "white";

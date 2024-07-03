@@ -5,7 +5,6 @@ const liElements = document.querySelectorAll("#categories .item li");
 const titleStyle = document.querySelectorAll("#categories .item");
 const ulStyles = document.querySelectorAll("#categories .item ul");
 
-
 console.log(`Number of categories: ${h2Count}`);
 
 items.forEach((item) => {
@@ -30,6 +29,4 @@ ulStyles.forEach((ul) => {
   ul.style.paddingLeft = "0";
 });
 
-
 categ.style.maxWidth = "360px";
-
