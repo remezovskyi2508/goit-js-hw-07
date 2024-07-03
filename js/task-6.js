@@ -11,8 +11,7 @@ function getRandomHexColor() {
 
 function destroyBoxes() {
   box.innerHTML = "";
-};
-
+}
 
 create.addEventListener("click", () => {
   const inputValue = parseInt(input.value);
