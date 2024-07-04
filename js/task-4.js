@@ -56,4 +56,3 @@ btnStyle.style.backgroundColor = "#4E75FF";
 btnStyle.style.color = "white";
 btnStyle.style.padding = "8px 16px";
 btnStyle.style.borderRadius = "8px";
-btnStyle.style.fontWeight = "500";
