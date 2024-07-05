@@ -14,23 +14,30 @@ function destroyBoxes() {
   box.innerHTML = "";
 }
 
+function createBox(amount) {
+  let size = 30;
+  const arr = []; // створюємо пустий масив.
+  for (let i = 1; i <= amount; i++) {
+    // заповнюємо пустий масив строками n разів.
+    arr.push(
+      `<div class='item' style = "width: ${size}px; height: ${size}px; border: 1px solid #000; background-color: ${getRandomHexColor()}"></div>`
+    );
+  }
+  box.innerHTML = arr.join(""); // обєднуємо масив в одну строку
+  size += 10;
+}
+
 create.addEventListener("click", () => {
   const inputValue = parseInt(input.value);
   destroyBoxes();
   if (inputValue !== 0 && inputValue <= 100) {
-    let size = 30;
-    for (let i = 0; i < inputValue; i++) {
-      box.insertAdjacentHTML(
-        "beforeend",
-        `<div class='item' style = "width: ${size}px; height: ${size}px; border: 1px solid #000; background-color: ${getRandomHexColor()}"></div>`
-      );
-      size += 10;
-    }
+    createBox(inputValue); //викликає функцію з вкладеним параметром inputValue і отримує вже готовий рядок з n - кількістю.
   }
   input.value = "";
 });
 
 destroy.addEventListener("click", destroyBoxes);
+
 // ul styles
 box.style.display = "flex";
 box.style.flexWrap = "wrap";
