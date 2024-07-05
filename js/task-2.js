@@ -1,6 +1,3 @@
-const gallery = document.querySelector(".gallery");
-const body = document.querySelector("body");
-
 const images = [
   {
     url: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260",
@@ -28,13 +25,17 @@ const images = [
   },
 ];
 
-images.forEach((item) => {
-  // Перебираємо item в масиві images
-  gallery.insertAdjacentHTML(
-    "beforeend", // вкладаємо в середеину ul
-    `<li><img src="${item.url}" alt="${item.alt}" style="width: 360px; height: 300px;"></li>`
-  );
-});
+const gallery = document.querySelector(".gallery");
+const body = document.querySelector("body");
+
+const img = images
+  .map(
+    (item) =>
+      `<li class="gallery_item"><img src="${item.url}" alt="${item.alt}" style="width: 360px; height: 300px;"></li>`
+  )
+  .join("");
+
+gallery.insertAdjacentHTML("afterbegin", img);
 
 gallery.style.flexWrap = "wrap";
 gallery.style.display = "flex";
